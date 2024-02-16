@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="section" id="introduction">
+        <div class="content">
+            <h2>Introduction to Enaya's Project</h2>
+            <p>Hey sweetheart..Today is valentines day and i hope to get this final draft to you before the day is over. i have been working on this for a little bit but our current situation made me switch things up unfortunately
+                I almost changed the project completely and i even had thought s of scrapping it but i want you to see my art. i tried to think of what could possibly be meaningful as a gift to to. obviously i thought about the normal things like buying you lots of expensive things but i wanted to be a bit more impressive and do something im almost positive no one else would do for you EVER.
+                thats how i came up with the idea to use my part of the reason you loved me to build a gift for you. my knowledge. i had really high visions for this project but i settled beuase of the time constraints and the possibilty that we wont talk anymore. But enjoy my love!!!
+            </p>
+        </div>
+
+    </div>
+
+    <div class="section" id="section1">
+        <div class="content">
+            <h2>Chapter One: Our Beginning</h2>
+            <p>We have talked about our begininngs countless times and i promise it was enchanting
+                im so happy i had the chance to experience you. im so happy we had our time. i truly want to have my time with you. </p>
+        </div>
+        <div class="image">
+            <img src="Smiles.png" alt="Our Beginning">
+        </div>
+    </div>
+    
+    <div class="section" id="section2">
+        <div class="content">
+            <h2>Chapter Two: Adventures Together</h2>
+            <p>Our adventures that brought us closer...</p>
+        </div>
+        <div class="image">
+            <img src="your-photo-url-2.jpg" alt="Adventures Together">
+        </div>
+    </div>
+    
+<!-- Previous sections go here -->
+
+<div class="contact-section" id="contact">
+    <div class="content">
+        <h2>Have Something to Say?</h2>
+        <p>I'm always here to listen to you. Feel free to share your thoughts or anything you want to talk about.</p>
+    </div>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<script>
+// Intersection Observer setup for sections
+let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5
+};
+
+let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
+        }
+    });
+}, options);
+
+document.querySelectorAll('.section, .contact-section').forEach(section => {
+    observer.observe(section);
+});
+</script>
+
+</body>
+</html>
